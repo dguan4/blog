@@ -13,7 +13,21 @@
   background: white;
 
   &-logo {
+    opacity: 0;
     text-decoration: none;
+    display: inline-block;
+    animation: fadein 1s ease-in 1s 1 forwards;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(0%, 0%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(10%, 0%);
   }
 }
 </style>
