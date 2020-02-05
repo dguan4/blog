@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getBlogSlug(slug) {
-      return `blog/${slug}`;
+      return `/blog/${slug}`;
     }
   }
 };
