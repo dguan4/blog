@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1>
+    <h1 class>
       <nuxt-link class="header-logo" to="/">
         <svg viewBox="130 90 160 220" id="dg">
           <g fill="none" stroke="#000">
@@ -21,14 +21,52 @@
         </svg>
       </nuxt-link>
     </h1>
+    <div class="header-links">
+      <ul>
+        <li>
+          <nuxt-link class="header-link" to>Blog</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="header-link" to>About Me</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="header-link" to>How I Made It</nuxt-link>
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
 <style lang="scss">
 .header {
-  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 16px 0;
   box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
   background: white;
+
+  &-logo {
+    padding-left: 1rem;
+  }
+
+  &-links {
+    ul {
+      display: flex;
+      list-style: none;
+      padding-right: 1rem;
+
+      li {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  &-link {
+    @include links;
+    color: $color-link;
+    text-decoration: none;
+  }
 
   // &-logo {
   //   opacity: 0;
@@ -67,11 +105,22 @@ export default {
       script: [
         {
           src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"
+        },
+        {
+          src:
+            "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
         }
-        // {
-        //   src:
-        //     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
-        // }
+      ],
+      link: [
+        {
+          href:
+            "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css",
+          rel: "stylesheet"
+        },
+        {
+          href: "https://fonts.googleapis.com/css?family=Rubik&display=swap",
+          rel: "stylesheet"
+        }
       ]
     };
   },

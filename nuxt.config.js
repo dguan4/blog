@@ -40,8 +40,14 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: [
+      "~assets/scss/_manifest.scss"
+    ]
+  },
   markdownit: {
     injected: true
   },

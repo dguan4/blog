@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style>
+html,
+body {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
 body {
   margin: 0;
 }
