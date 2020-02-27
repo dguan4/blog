@@ -106,10 +106,10 @@ export default {
         {
           src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"
         },
-        {
-          src:
-            "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
-        }
+        //{
+        //  src:
+        //    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
+        //}
       ],
       link: [
         {
