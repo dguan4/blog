@@ -16,12 +16,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 html,
 body {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 body {
   margin: 0;
+  background-color: $color-background;
+  color: $color-text;
 }
 </style>

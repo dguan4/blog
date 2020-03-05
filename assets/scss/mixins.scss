@@ -36,11 +36,28 @@
   transition: $args;
 }
 
-@mixin links {
+@mixin links($link: $color-link) {
   @include transition(color 0.3s ease);
-  color: $color-link;
+  color: $link;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: $color-underline;
+    @include transition(width 0.3s ease);
+  }
 
   &:hover {
-    color: darken($color-link, 20%);
+    color: darken($link, 20%);
+
+    &::after {
+      width: 100%;
+    }
   }
+
 }

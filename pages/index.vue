@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="container-long">test</div>
+    <div class="hero">Welcome to my Blog</div>
   </div>
 </template>
 
@@ -28,5 +28,11 @@ export default {
   &-long {
     height: 500px;
   }
+}
+
+.hero {
+  min-height: 40vh;
+  width: 100%;
+  animation: background 7s linear infinite;
 }
 </style>

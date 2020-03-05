@@ -1,0 +1,16 @@
+@keyframes background {
+  0% {
+    background-color: $color-hero-background;
+    // transform: translate(0%, 0%);
+  }
+
+  50% {
+    // opacity: 1;
+    // transform: translate(10%, 0%);
+    background-color: $color-hero-background-2;
+  }
+
+  100% {
+    background-color: $color-hero-background;
+  }
+}

@@ -3,7 +3,7 @@
     <h1 class>
       <nuxt-link class="header-logo" to="/">
         <svg viewBox="130 90 160 220" id="dg">
-          <g fill="none" stroke="#000">
+          <g fill="none" stroke="#fff">
             <!--     <path d="M7.3 75L25.9 6.8s58.4-6.4 33.5 13-41.1 32.8-11.2 30.8h15.9v5.5s42.6 18.8 0 20.6" />
     <path d="M133.1 58.2s12.7-69.2 24.4-47.5c0 0 4.1 8.6 9.5.9 0 0 5-10 10.4.9 0 0 12.2 
             32.6 13.6 43 0 0 39.8 5.4 15.8 15.4-13.2 5.5-53.8 13.1-77.4 5.9.1 0-51.9-15.4 3.7-18.6z" />-->
@@ -24,7 +24,7 @@
     <div class="header-links">
       <ul>
         <li>
-          <nuxt-link class="header-link" to>Blog</nuxt-link>
+          <nuxt-link class="header-link" to="blog">Blog</nuxt-link>
         </li>
         <li>
           <nuxt-link class="header-link" to>About Me</nuxt-link>
@@ -44,10 +44,14 @@
   align-items: center;
   // padding: 16px 0;
   box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: $color-background;
+  position: sticky;
+  top: 0;
+  // animation: background 1s linear 1s infinite;
 
   &-logo {
     padding-left: 1rem;
+    margin: 0.5rem 0;
   }
 
   &-links {
@@ -63,8 +67,8 @@
   }
 
   &-link {
-    @include links;
-    color: $color-link;
+    @include links(white);
+    // color: $color-link;
     text-decoration: none;
   }
 
@@ -105,11 +109,11 @@ export default {
       script: [
         {
           src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"
-        },
-        //{
-        //  src:
-        //    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
-        //}
+        }
+        // {
+        //   src:
+        //     "https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
+        // }
       ],
       link: [
         {

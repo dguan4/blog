@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  max-width: 1600px;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  @include links;
+  text-decoration: none;
+}
