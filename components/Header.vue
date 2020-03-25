@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1 class>
+    <h1 class title="David Guan">
       <nuxt-link class="header-logo" to="/">
         <svg viewBox="130 90 160 220" id="dg">
           <g fill="none" stroke="#fff">

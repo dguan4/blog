@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <div class="hero">Welcome to my Blog</div>
+    <div class="hero">
+      <h2>
+        Welcome to my Blog
+      </h2>
+
+
+    </div>
   </div>
 </template>
 
@@ -23,7 +29,6 @@ export default {
 
 <style lang="scss">
 .container {
-  max-width: 1600px;
 
   &-long {
     height: 500px;
@@ -33,6 +38,7 @@ export default {
 .hero {
   min-height: 40vh;
   width: 100%;
-  animation: background 7s linear infinite;
+  // animation: background 7s linear infinite;
+  padding-top: 4rem;
 }
 </style>
