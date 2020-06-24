@@ -5,7 +5,7 @@
         {{ homePost.title }}
       </h2>
     </div>
-    <div class="content" v-html="homePost.body">
+    <div class="content" v-html="$md.render(homePost.body)">
 
     </div>
   </div>
