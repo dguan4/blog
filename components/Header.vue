@@ -43,7 +43,7 @@
   justify-content: space-between;
   align-items: center;
   // padding: 16px 0;
-  box-shadow: 0px 10px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1);
   background: $color-background;
   position: sticky;
   top: 0;

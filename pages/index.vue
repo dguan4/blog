@@ -28,7 +28,6 @@ export default {
   computed: {
     homePost() {
       var firstPost = this.$store.state.homePosts[0]
-      console.log(firstPost)
       return firstPost
     },
     getHeroImageString() {
