@@ -4,12 +4,6 @@
       <div>
         Built by David Guan
       </div>
-      <div>
-        For David Guan
-      </div>
-      <div>
-        By David Guan For David Guan
-      </div>
     </div>
 
     <div class="footer__right-side">
@@ -41,5 +35,6 @@ export default {
   background-color: $color-background;
   padding-top: 0.5rem;
   box-shadow: 0px -2px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem;
 }
 </style>

@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <div class="hero">
+    <div class="hero" :style="getHeroImageString">
       <h2>
-        Welcome to my Blog
+        {{ homePost.title }}
       </h2>
-
+    </div>
+    <div class="content" v-html="homePost.body">
 
     </div>
   </div>
@@ -23,6 +24,20 @@ export default {
   },
   components: {
     Logo
+  },
+  computed: {
+    homePost() {
+      var firstPost = this.$store.state.homePosts[0]
+      console.log(firstPost)
+      return firstPost
+    },
+    getHeroImageString() {
+      // var heroImageUrl = this.homePost.Image - todo, setup heroimage in config
+      var heroImageUrl = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapercave.com%2Fwp%2FT19Do0I.jpg&f=1&nofb=1"
+      return `background-image: url('${heroImageUrl}')`
+    }
+  },
+  methods: {
   }
 };
 </script>
@@ -33,12 +48,5 @@ export default {
   &-long {
     height: 500px;
   }
-}
-
-.hero {
-  min-height: 40vh;
-  width: 100%;
-  // animation: background 7s linear infinite;
-  padding-top: 4rem;
 }
 </style>

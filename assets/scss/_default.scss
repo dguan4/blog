@@ -4,13 +4,51 @@ h2 {
 
 .container {
   display: flex;
-  max-width: 1600px;
+  flex-direction: column;
+  // max-width: 1600px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  color: white;
+  // background-color: $color-hero-background;
+
+  &__inner {
+    // background-color: $color-hero-background;
+    // width: 75%;
+  }
 }
 
 a {
   @include links;
   text-decoration: none;
+}
+
+.hero {
+  min-height: 40vh;
+  width: 100%;
+  // animation: background 7s linear infinite;
+  padding-top: 4rem;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  background-repeat: none;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  // &:hover {
+  //   transform: translate3d(-1px, -1px, 2px);
+  //   border: 1px solid $color-link;
+  // }
+}
+
+.content {
+  background-color: white;
+  margin-top: -3rem;
+  padding: 3rem;
+  color: $color-dark-blue;
+  text-align: justify;
+  // border: 1px solid $color-dark-blue;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  max-width: 75%;
 }
