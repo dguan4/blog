@@ -2,5 +2,5 @@
   "date": "2020-06-24T04:19:05.169Z",
   "title": "Welcome to my blog",
   "description": "More about me",
-  "body": "This site was created using Netlify CMS!\n\nView how this works here: https://www.netlifycms.org/"
+  "body": "This site was created using Netlify CMS!\n\nView how this works here: <https://www.netlifycms.org/>"
 }
