@@ -13,22 +13,30 @@ export const mutations = {
 }
 
 export const actions = {
+  // async nuxtServerInit({ commit }) {
+  //   let files = await require.context('~/assets/content/blog/', false, /\.json$/)
+  //   let blogPosts = files.keys().map(key => {
+  //     let res = files(key)
+  //     res.slug = key.slice(2, -5)
+  //     return res
+  //   })
+  //   await commit('setBlogPosts', blogPosts)
+  // },
   async nuxtServerInit({ commit }) {
-    let files = await require.context('~/assets/content/blog/', false, /\.json$/)
-    let blogPosts = files.keys().map(key => {
-      let res = files(key)
-      res.slug = key.slice(2, -5)
-      return res
-    })
-    await commit('setBlogPosts', blogPosts)
-  },
-  async nuxtServerInit({ commit }) {
-    let files = await require.context('~/assets/content/home/', false, /\.json$/)
-    let homePosts = files.keys().map(key => {
-      let res = files(key)
+    let homeFiles = await require.context('~/assets/content/home/', false, /\.json$/)
+    let homePosts = homeFiles.keys().map(key => {
+      let res = homeFiles(key)
       res.slug = key.slice(2, -5)
       return res
     })
     await commit('setHomePosts', homePosts)
+
+    let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
+    let blogPosts = blogFiles.keys().map(key => {
+      let res = blogFiles(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+    await commit('setBlogPosts', blogPosts)
   },
 }
