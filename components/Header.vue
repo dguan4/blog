@@ -27,10 +27,10 @@
           <nuxt-link class="header-link" to="blog">Blog</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="header-link" to>About Me</nuxt-link>
+          <nuxt-link class="header-link" to="about">About Me</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="header-link" to>How I Made It</nuxt-link>
+          <nuxt-link class="header-link" to="how">How I Made It</nuxt-link>
         </li>
       </ul>
     </div>
