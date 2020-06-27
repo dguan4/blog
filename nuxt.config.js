@@ -33,6 +33,7 @@ module.exports = {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Nuxt.js modules
@@ -40,8 +41,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/markdownit'
   ],
   styleResources: {
     scss: [

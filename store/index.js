@@ -1,14 +1,18 @@
 export const state = () => ({
   blogPosts: [],
-  homePost: []
+  homePagePost: {},
+  blogLandingPost: {}
 })
 
 export const mutations = {
   setBlogPosts(state, list) {
     state.blogPosts = list
   },
-  setHomePosts(state, list) {
-    state.homePosts = list
+  setHomePagePost(state, item) {
+    state.homePagePost = item
+  },
+  setBlogLandingPost(state, item) {
+    state.blogLandingPost = item
   }
 }
 
@@ -23,14 +27,6 @@ export const actions = {
   //   await commit('setBlogPosts', blogPosts)
   // },
   async nuxtServerInit({ commit }) {
-    let homeFiles = await require.context('~/assets/content/home/', false, /\.json$/)
-    let homePosts = homeFiles.keys().map(key => {
-      let res = homeFiles(key)
-      res.slug = key.slice(2, -5)
-      return res
-    })
-    await commit('setHomePosts', homePosts)
-
     let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
     let blogPosts = blogFiles.keys().map(key => {
       let res = blogFiles(key)
@@ -38,5 +34,11 @@ export const actions = {
       return res
     })
     await commit('setBlogPosts', blogPosts)
+
+    let homePagePost = await require("~/assets/content/home.json")
+    await commit('setHomePagePost', homePagePost)
+
+    let blogLandingPost = await require("~/assets/content/blog.json")
+    await commit('setBlogLandingPost', blogLandingPost)
   },
 }

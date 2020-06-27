@@ -27,8 +27,8 @@ export default {
   },
   computed: {
     homePost() {
-      var firstPost = this.$store.state.homePosts[0]
-      return firstPost
+      var homePost = this.$store.state.homePagePost
+      return homePost
     },
     getHeroImageString() {
       // var heroImageUrl = this.homePost.Image - todo, setup heroimage in config

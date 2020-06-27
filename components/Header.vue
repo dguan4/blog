@@ -52,6 +52,9 @@
   &-logo {
     padding-left: 1rem;
     margin: 0.5rem 0;
+    &::after {
+      content: none;
+    }
   }
 
   &-links {
